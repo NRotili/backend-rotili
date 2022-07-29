@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.portfolio.ngr.Entity;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,13 +16,15 @@ public class Educacion {
     private int id;
     private String nombreE;
     private String descripcionE;
+    private String periodoE;
 
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String descripcionE) {
+    public Educacion(String nombreE, String descripcionE, String periodoE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.periodoE = periodoE;
     }
 
     public int getId() {
@@ -47,6 +50,16 @@ public class Educacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+
+    public String getPeriodoE() {
+        return periodoE;
+    }
+
+    public void setPeriodoE(String periodoE) {
+        this.periodoE = periodoE;
+    }
+    
+    
     
     
 }
