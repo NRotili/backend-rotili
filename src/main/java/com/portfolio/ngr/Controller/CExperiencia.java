@@ -63,7 +63,7 @@ public class CExperiencia {
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         }
 
-        Experiencia experiencia = new Experiencia(dtoexp.getNombreE(), dtoexp.getDescripcionE(), dtoexp.getInicioE(), dtoexp.getFinE());
+        Experiencia experiencia = new Experiencia(dtoexp.getNombreE(), dtoexp.getDescripcionE(),dtoexp.getLugarE(), dtoexp.getInicioE(), dtoexp.getFinE());
         sExperiencia.save(experiencia);
 
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
@@ -90,6 +90,7 @@ public class CExperiencia {
         experiencia.setDescripcionE((dtoexp.getDescripcionE()));
         experiencia.setInicioE(dtoexp.getInicioE());
         experiencia.setFinE(dtoexp.getFinE());
+        experiencia.setLugarE(dtoexp.getLugarE());
 
         sExperiencia.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);

@@ -13,17 +13,27 @@ public class Experiencia {
     private int id;
     private String nombreE;
     private String descripcionE;
+    private String lugarE;
     private Date inicioE;
     private Date finE;
 
     public Experiencia() {
     }
 
-    public Experiencia(String nombreE, String descripcionE, Date inicioE, Date finE) {
+    public Experiencia(String nombreE, String descripcionE, String lugarE, Date inicioE, Date finE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.lugarE = lugarE;
         this.inicioE = inicioE;
         this.finE = finE;
+    }
+
+    public String getLugarE() {
+        return lugarE;
+    }
+
+    public void setLugarE(String lugarE) {
+        this.lugarE = lugarE;
     }
 
     public Date getInicioE() {

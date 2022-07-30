@@ -72,7 +72,7 @@ public class CProyecto {
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         }
 
-        Proyecto proyecto = new Proyecto(dtopro.getNombreP(), dtopro.getDescripcionP(), dtopro.getFechaP());
+        Proyecto proyecto = new Proyecto(dtopro.getNombreP(), dtopro.getDescripcionP(), dtopro.getFechaP(), dtopro.getUrlP(), dtopro.getEmpresaP());
         sProyecto.save(proyecto);
 
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
@@ -98,6 +98,8 @@ public class CProyecto {
         proyecto.setNombreP(dtopro.getNombreP());
         proyecto.setDescripcionP((dtopro.getDescripcionP()));
         proyecto.setFechaP(dtopro.getFechaP());
+        proyecto.setUrlP(dtopro.getUrlP());
+        proyecto.setEmpresaP(dtopro.getEmpresaP());
 
 
         sProyecto.save(proyecto);

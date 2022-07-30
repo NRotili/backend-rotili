@@ -13,17 +13,29 @@ public class dtoExperiencia {
     @NotBlank
     private Date inicioE;
     private Date finE;
+    private String lugarE;
 
 
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE, Date inicioE, Date finE) {
+    public dtoExperiencia(String nombreE, String descripcionE, Date inicioE, Date finE, String lugarE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.inicioE = inicioE;
-        this.finE = finE;   
+        this.finE = finE;
+        this.lugarE = lugarE;
     }
+
+    public String getLugarE() {
+        return lugarE;
+    }
+
+    public void setLugarE(String lugarE) {
+        this.lugarE = lugarE;
+    }
+
+    
 
     public Date getInicioE() {
         return inicioE;

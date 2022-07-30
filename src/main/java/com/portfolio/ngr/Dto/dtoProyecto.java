@@ -18,15 +18,39 @@ public class dtoProyecto {
     private String descripcionP;
     @NotBlank
     private String fechaP;
+     @NotBlank
+    private String urlP;
+      @NotBlank
+    private String empresaP;
 
     public dtoProyecto() {
     }
 
-    public dtoProyecto(String nombreP, String descripcionP, String fechaP) {
+    public dtoProyecto(String nombreP, String descripcionP, String fechaP, String urlP, String empresaP) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
         this.fechaP = fechaP;
+        this.urlP = urlP;
+        this.empresaP = empresaP;
     }
+
+    public String getUrlP() {
+        return urlP;
+    }
+
+    public void setUrlP(String urlP) {
+        this.urlP = urlP;
+    }
+
+    public String getEmpresaP() {
+        return empresaP;
+    }
+
+    public void setEmpresaP(String empresaP) {
+        this.empresaP = empresaP;
+    }
+
+   
 
     public String getNombreP() {
         return nombreP;
